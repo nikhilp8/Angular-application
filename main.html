@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app='App'>
+
+<head>
+	<script data-require="angular.js@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div ng-controller='MainCtrl'>
+		<h1>{{message}}</h1>
+	</div>
+</body>
+
+<script type="text/javascript">
+	angular.module('App',[]).controller('MainCtrl',function($scope){
+		$scope.message="Hello World";
+	})
+</script>
+
+</html>
