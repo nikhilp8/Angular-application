@@ -40,7 +40,7 @@
 					<th>duration</th>
 					<th>Votes</th>
 				</tr>
-				<tr ng-repeat='x in Event.Sessions'>
+				<tr ng-repeat='x in Event.Sessions | orderBy:sortOrder'>
 					<td>{{x.course}}</td>
 					<td>{{x.author}}</td>
 					<td>{{x.duration}}</td>

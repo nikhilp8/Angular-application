@@ -1,6 +1,7 @@
 'use strict';
 
 eventsApp.controller('EventController', function EventController($scope) {
+	$scope.sortOrder= '-upVote';
 	$scope.Event = {
 			name: 'AngularJS',
 			date: 'Sept-4-2016',
