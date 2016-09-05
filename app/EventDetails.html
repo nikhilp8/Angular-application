@@ -13,6 +13,8 @@
 	<script src="lib/angular/angular.min.js"></script>
 	<script src='js/app.js'></script>
 	<script src='js/controllers/EventController.js'></script>
+	<script src='js/filters.js'></script>
+
 </head>
 
 <body>
@@ -43,7 +45,7 @@
 				<tr ng-repeat='x in Event.Sessions | orderBy:sortOrder'>
 					<td>{{x.course}}</td>
 					<td>{{x.author}}</td>
-					<td>{{x.duration}}</td>
+					<td>{{x.duration | durationFilter}}</td>
 					<td>
 					<button ng-click='upVote(x)' type="button" class="btn btn-default" aria-label="Left Align">
   						<i class="fa fa-arrow-up" aria-hidden="true"></i>
