@@ -2,6 +2,7 @@
 
 eventsApp.controller('EventController', function EventController($scope) {
 	$scope.sortOrder= '-upVote';
+
 	$scope.Event = {
 			name: 'AngularJS',
 			date: 'Sept-4-2016',
@@ -40,4 +41,5 @@ eventsApp.controller('EventController', function EventController($scope) {
 	$scope.downVote = function(x) {
 		x.upVote--;
 	}
+	
 });
