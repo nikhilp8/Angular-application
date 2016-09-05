@@ -15,19 +15,28 @@ eventsApp.controller('EventController', function EventController($scope) {
 			{
 				course: 'Angular 1.5',
 				author: 'Joe Eames',
-				duration: '5 hr'
+				duration: '5 hr',
+				upVote: 0
 			},
 			{	
 				course: 'Bootstrap 3',
 				author: 'Shawn Wilderman',
-				duration: '2 hr'
+				duration: '2 hr',
+				upVote: 0
 
 			},
 			{	
 				course: 'Advanced JS',
 				author: 'Scot allen',
-				duration: '4 hr'
+				duration: '4 hr',
+				upVote: 0
 
 			}]
 			}
-	});
+	$scope.upVote = function(x) {
+		x.upVote++;
+	}
+	$scope.downVote = function(x) {
+		x.upVote--;
+	}
+});
