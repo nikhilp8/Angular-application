@@ -23,27 +23,28 @@
 				<h1>Edit Event Details</h1>
 			</div>
 	<div>
-		<form>
+		<form name='newEventForm'>
 			<fieldset>
 				<label for="text-input" >Course Title</label>
 					<input type="text" required placeholder="Course title" id="text-input" ng-model='event.CourseName'>
 				<label for="text-input" >Author name</label>
-					<input type="text" required placeholder="Author Name" id="text-input" ng-model='event.CourseName'>
+					<input type="text" required placeholder="Author Name" id="text-input" ng-model='event.AuthorName'>
 				<label for="text-input" >Date</label>
-					<input type="text" required placeholder="Date" id="text-input" ng-model='event.CourseName'>
+					<input type="text" required placeholder="format(mm/dd/yyyy)" ng-pattern='/\d\d/\d\d/\d\d\d\d/' id="text-input" ng-model='event.Date'>
 				<label for="text-input" >Number of hours</label>
-					<input type="text" required placeholder="Number of hours" id="text-input" ng-model='event.CourseName'>
+					<input type="text" required placeholder="Number of hours" id="text-input" ng-model='event.duration'>
 				<label for="text-input" >Event location</label>
-					<input type="text" required placeholder="Street address" id="text-input" ng-model='event.CourseName'>
-					<input type="text" required placeholder="city" id="text-input" ng-model='event.CourseName'>
-					<input type="text" required placeholder="state" id="text-input" ng-model='event.CourseName'>
+					<input type="text" required placeholder="Street address" id="text-input" ng-model='event.location'>
+					<input type="text" required placeholder="city" id="text-input" ng-model='event.city'>
+					<input type="text" required placeholder="state" id="text-input" ng-model='event.state'>
 				<label for="text-input" >Image URL</label>
-					<input type="text" required placeholder="Enter image URL" id="text-input" ng-model='event.CourseName'><br/>
-				<button ng-click='save(event,newEventForm)'type="button" class="btn btn-default" aria-label="Left Align">
+					<input type="text" required placeholder="Enter image URL" id="text-input" ng-model='event.imageURL'><br/>
+			</fieldset>
+				<button ng-disabled='newEventForm.$invalid' ng-click='save(event,newEventForm)'type="button" class="btn btn-default" aria-label="Left Align">
   						Save</button>
 				<button  ng-click='cancel(event)' type="button" class="btn btn-default" aria-label="Left Align">
   						Cancel</button>
-			</fieldset>
+			
 	</div>
 
 </body>

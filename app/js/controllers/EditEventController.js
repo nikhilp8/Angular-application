@@ -5,7 +5,7 @@ eventsApp.controller('EditEventController', function EditEventController($scope)
 		window.location = '/EventDetails.html';
 	}
 	$scope.save = function(event, newEventForm){
-		if(newEventform,&valid)
+		if(newEventform.$valid)
 		{
 			window.alert(event.name+' new event saved');
 		}
