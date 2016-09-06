@@ -5,7 +5,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>EventDetails</title>
 	<link rel='stylesheet' href='css/bootstrap.min.css'>
-	<link rel='stylesheet' href='css/app.css'>
+	<link rel='stylesheet' href='css/app.css'> 
 	<script src="lib/jquery.min.js"></script>
 	<script src="lib/underscore-1.4.4.min.js"></script>
 	<script src="lib/bootstrap.min.js"></script>
@@ -18,85 +18,33 @@
 </head>
 
 <body>
-	<div class='container'>
-		<div ng-controller='EditEventController'>
-			
+	<div class='container' name='newEventForm' ng-controller='EditEventController'>
 			<div class='navbar'>
 				<h1>Edit Event Details</h1>
 			</div>
-			<div class='row'>
-					<div class="form-group row">
-					  <label for="example-text-input" class="col-xs-2 col-form-label">Course Title</label>
-					  <div class="col-xs-10">
-					    <input class="form-control" type="text" placeholder="Course Name" id="example-text-input" ng-model='event.CourseName'>
-					  </div>
-					</div>
-
-					<div class="form-group row">
-					  <label for="example-text-input" class="col-xs-2 col-form-label">Author Name</label>
-					  <div class="col-xs-10">
-					    <input ng-model='event.AuthorName' class="form-control" type="text" placeholder="Author Name" id="example-text-input">
-					  </div>
-					</div>
-					
-					<div class="form-group row">
-					  <label for="example-date-input" class="col-xs-2 col-form-label">Date</label>
-					  <div class="col-xs-10">
-					    <input ng-model='event.date' class="form-control" type="date" placeholder="2011-08-19" id="example-date-input">
-					  </div>
-					</div>
-					
-					
-					
-					<div class="form-group row">
-					  <label for="example-number-input" class="col-xs-2 col-form-label">Number of Hours</label>
-					  <div class="col-xs-10">
-					    <input ng-model='event.duration' class="form-control" type="number" placeholder="5" id="example-number-input">
-					  </div>
-					</div>
-
-					<div class="form-group row">
-                    <label for="address-line1" class="col-xs-2 col-form-label">Event Location</label>
-                    <div class="col-xs-10">
-                        <input ng-model='event.location' id="address-line1" name="address-line1" type="text" placeholder="address line 1"
-                        class="form-control">
-                        
-                    </div>
-                </div>
-                	
-                <div class="form-group row">
-                    
-                    <div class="col-xs-5">
-                        <input id="address-line1" name="address-line1" type="text" placeholder="City"
-                        class="form-control" ng-model='event.city'>                  
-                        
-                    </div>
-                    <div class="col-xs-5">
-                        <input id="address-line1" name="address-line1" type="text" placeholder="State"
-                        class="form-control" ng-model='event.state'>
-                        
-                    </div>   				
-
-				</div>
-				<div class="form-group row">
-					  <label for="example-text-input" class="col-xs-2 col-form-label">ImageURL</label>
-					  <div class="col-xs-10">
-					    <input ng-model="event.imageURL" class="form-control" type="text" placeholder="Image URL" id="example-text-input">
-					  </div>
-					  <div><img class='img-responsive'ng-src={{event.imageURL}}></div>
-					</div>
-				
-				
-			
-		</div>
-		<button ng-click='save(event)'type="button" class="btn btn-default" aria-label="Left Align">
-  						Save
-						</button>
+	<div>
+		<form>
+			<fieldset>
+				<label for="text-input" >Course Title</label>
+					<input type="text" required placeholder="Course title" id="text-input" ng-model='event.CourseName'>
+				<label for="text-input" >Author name</label>
+					<input type="text" required placeholder="Author Name" id="text-input" ng-model='event.CourseName'>
+				<label for="text-input" >Date</label>
+					<input type="text" required placeholder="Date" id="text-input" ng-model='event.CourseName'>
+				<label for="text-input" >Number of hours</label>
+					<input type="text" required placeholder="Number of hours" id="text-input" ng-model='event.CourseName'>
+				<label for="text-input" >Event location</label>
+					<input type="text" required placeholder="Street address" id="text-input" ng-model='event.CourseName'>
+					<input type="text" required placeholder="city" id="text-input" ng-model='event.CourseName'>
+					<input type="text" required placeholder="state" id="text-input" ng-model='event.CourseName'>
+				<label for="text-input" >Image URL</label>
+					<input type="text" required placeholder="Enter image URL" id="text-input" ng-model='event.CourseName'><br/>
+				<button ng-click='save(event,newEventForm)'type="button" class="btn btn-default" aria-label="Left Align">
+  						Save</button>
 				<button  ng-click='cancel(event)' type="button" class="btn btn-default" aria-label="Left Align">
-  						Cancel
-						</button>
+  						Cancel</button>
+			</fieldset>
 	</div>
-
 
 </body>
 
