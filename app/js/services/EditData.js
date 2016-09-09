@@ -34,5 +34,5 @@ eventsApp.factory('EventData', function(){
 
 			}]
 			}
-	}
+	};
 })
